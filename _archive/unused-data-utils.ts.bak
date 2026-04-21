@@ -1,0 +1,13 @@
+// Removed from src/lib/data.ts on 2026-04-21 — no call sites in the app.
+// Kept here in case we reintroduce kWh-first summaries on the dashboard.
+
+export function compactKwh(n: number) {
+  if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(2)} GWh`;
+  return `${n.toLocaleString()} kWh`;
+}
+
+export function kwhPerYear(n: number) {
+  if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1)}M kWh/yr`;
+  if (n >= 1_000) return `${Math.round(n / 1_000)}k kWh/yr`;
+  return `${Math.round(n).toLocaleString()} kWh/yr`;
+}

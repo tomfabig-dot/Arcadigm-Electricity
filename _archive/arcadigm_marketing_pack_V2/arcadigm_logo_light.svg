@@ -1,0 +1,14 @@
+<svg width="1100" height="260" viewBox="0 0 1100 260" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="innerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+<stop offset="0%" stop-color="#10B981"/>
+<stop offset="100%" stop-color="#84CC16"/>
+</linearGradient>
+</defs>
+<g transform="translate(40,20)">
+<path d="M32 176 A96 96 0 0 1 224 176" stroke="#FFFFFF" stroke-width="24" stroke-linecap="round" fill="none"/>
+<path d="M72 176 A56 56 0 0 1 184 176" stroke="url(#innerGrad)" stroke-width="22" stroke-linecap="round" fill="none"/>
+<rect x="116" y="48" width="24" height="24" fill="#A3E635" transform="rotate(45 128 60)"/>
+</g>
+<text x="320" y="180" font-family="Inter, Helvetica, Arial, sans-serif" font-weight="600" font-size="130" fill="#FFFFFF">rcadigm</text>
+</svg>

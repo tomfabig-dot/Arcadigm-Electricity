@@ -1,0 +1,11 @@
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="innerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+<stop offset="0%" stop-color="#10B981"/>
+<stop offset="100%" stop-color="#84CC16"/>
+</linearGradient>
+</defs>
+<path d="M32 176 A96 96 0 0 1 224 176" stroke="#064E3B" stroke-width="24" stroke-linecap="round" fill="none"/>
+<path d="M72 176 A56 56 0 0 1 184 176" stroke="url(#innerGrad)" stroke-width="22" stroke-linecap="round" fill="none"/>
+<rect x="116" y="48" width="24" height="24" fill="#059669" transform="rotate(45 128 60)"/>
+</svg>

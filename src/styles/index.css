@@ -1,0 +1,299 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* paper grain — inlined SVG noise */
+    --grain: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.13  0 0 0 0 0.12  0 0 0 0 0.10  0 0 0 1 0'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.9'/></svg>");
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    font-feature-settings: "ss01", "cv11";
+  }
+
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+    font-variation-settings: "wght" 400;
+  }
+
+  /* One global paper grain — fixed, non-scrolling, zero interaction cost */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: var(--grain);
+    background-size: 220px 220px;
+    opacity: 0.025;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Marketing pages keep the editorial grain at full strength */
+  body[data-surface="marketing"]::before { opacity: 0.05; }
+
+  ::selection {
+    background: oklch(0.34 0.075 155);
+    color: oklch(0.97 0.012 100);
+  }
+
+  h1, h2, h3 {
+    @apply font-display text-ink;
+    font-variation-settings: "wght" 700, "opsz" 96, "GRAD" 0;
+  }
+  h4, h5, h6 {
+    @apply font-sans text-ink font-semibold;
+  }
+
+  /* Numerals always mono, tabular — applied opportunistically via .num */
+  .num, .num * {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-feature-settings: "tnum" 1, "zero" 1, "ss01" 1;
+  }
+
+  /* Respect reduced motion globally */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* Container widths — editorial, not wide */
+  .container-edit {
+    @apply mx-auto w-full max-w-[1240px] px-5 sm:px-8 lg:px-12;
+  }
+  .container-lg {
+    @apply mx-auto w-full max-w-[1240px] px-5 sm:px-8 lg:px-12;
+  }
+  .container-md {
+    @apply mx-auto w-full max-w-3xl px-5 sm:px-8;
+  }
+  .container-sm {
+    @apply mx-auto w-full max-w-md px-5 sm:px-8;
+  }
+
+  /* Buttons — low-decoration, text-forward */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-[14px] font-semibold tracking-tight
+           transition-colors duration-med ease-out-quart
+           focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand
+           cursor-pointer;
+    --tw-ring-offset-color: oklch(0.970 0.006 90);
+  }
+  .btn-primary {
+    @apply btn bg-brand text-brand-fore hover:bg-brand-hover;
+  }
+  .btn-secondary {
+    @apply btn bg-white text-ink border border-ink-hairline hover:border-ink shadow-[0_1px_2px_0_oklch(0.22_0.018_150_/_0.04)];
+  }
+  .btn-ghost {
+    @apply btn text-ink hover:bg-paper-2;
+  }
+  /* Square-ish variant used in tight toolbars */
+  .btn-sm {
+    @apply rounded-full px-3.5 py-1.5 text-[12.5px];
+  }
+  .btn-link {
+    @apply inline-flex items-center gap-1.5 text-ui font-semibold text-ink underline decoration-ink-hairline underline-offset-[6px]
+           hover:text-brand hover:decoration-brand transition-colors duration-med;
+  }
+
+  /* Rule — editorial horizontal rule */
+  .rule {
+    @apply block w-full h-px bg-ink-hairline;
+  }
+
+  /* Eyebrow — the small mono label above section heads */
+  .eyebrow {
+    @apply inline-flex items-center gap-2 font-mono text-micro uppercase tracking-[0.16em] text-ink-muted;
+  }
+  .eyebrow::before {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.5;
+  }
+
+  /* Chips — no cards, just outlines */
+  .chip {
+    @apply inline-flex items-center gap-2 rounded-full border border-ink-hairline bg-paper-card px-3 py-1.5 text-caption font-medium text-ink-muted;
+  }
+  .chip-brand {
+    @apply chip border-brand/25 bg-brand-soft text-brand;
+  }
+
+  /* Input — flat, paper-card, brand focus */
+  .input {
+    @apply w-full rounded-md border border-ink-hairline bg-paper-card px-4 py-3 text-ui text-ink placeholder:text-ink-faint
+           focus:outline-none focus:ring-2 focus:border-brand transition-colors duration-med;
+    --tw-ring-color: oklch(0.34 0.075 155 / 0.25);
+  }
+  .label {
+    @apply block text-caption font-semibold text-ink mb-2;
+  }
+
+  /* Card — elevated white surface on cream bg, no hard border */
+  .card {
+    @apply rounded-2xl bg-white;
+    box-shadow:
+      0 1px 2px 0 oklch(0.22 0.018 150 / 0.04),
+      0 10px 30px -18px oklch(0.22 0.018 150 / 0.12);
+  }
+  .card-interactive {
+    @apply card transition-all duration-med ease-out-quart;
+  }
+  .card-interactive:hover {
+    transform: translateY(-1px);
+    box-shadow:
+      0 1px 2px 0 oklch(0.22 0.018 150 / 0.05),
+      0 18px 40px -18px oklch(0.22 0.018 150 / 0.18);
+  }
+
+  /* Hero card — dark forest-green filled card with white numerics */
+  .card-hero {
+    @apply rounded-2xl text-white relative overflow-hidden;
+    background:
+      radial-gradient(120% 90% at 100% 0%, oklch(0.34 0.085 155) 0%, oklch(0.24 0.080 155) 50%, oklch(0.20 0.075 155) 100%);
+    box-shadow:
+      0 1px 2px 0 oklch(0.22 0.018 150 / 0.08),
+      0 24px 48px -24px oklch(0.24 0.080 155 / 0.35);
+  }
+  .card-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(60% 40% at 85% 15%, rgba(255,255,255,0.08) 0%, transparent 70%),
+      linear-gradient(180deg, rgba(255,255,255,0.02) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .card-hero > * { position: relative; z-index: 1; }
+
+  /* Editorial micro-label — uppercase tracking, paired with display numerics */
+  .micro-label {
+    @apply text-[10.5px] font-semibold uppercase tracking-[0.12em] text-ink-faint;
+  }
+  .micro-label-on-hero {
+    @apply text-[10.5px] font-semibold uppercase tracking-[0.12em] text-white/70;
+  }
+
+  /* Display numerics — editorial, tabular, tight leading */
+  .display-num {
+    @apply font-display font-extrabold tracking-tightish tabular-nums leading-[1];
+    font-variation-settings: "wght" 800, "opsz" 96;
+  }
+
+  /* Pills — status/priority indicators */
+  .pill {
+    @apply inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[10.5px] font-bold uppercase tracking-[0.08em];
+  }
+  .pill-active {
+    @apply pill bg-brand-soft text-brand;
+  }
+  .pill-active::before {
+    content: "";
+    width: 6px; height: 6px;
+    border-radius: 9999px;
+    background: currentColor;
+  }
+  .pill-neutral {
+    @apply pill bg-bg-muted text-ink-muted;
+  }
+  .pill-alert {
+    @apply pill text-danger;
+    background-color: oklch(0.52 0.15 28 / 0.10);
+  }
+  .pill-warn {
+    @apply pill text-warn;
+    background-color: oklch(0.62 0.13 65 / 0.12);
+  }
+  .pill-high {
+    @apply pill text-danger;
+    background-color: oklch(0.52 0.15 28 / 0.10);
+  }
+  .pill-medium {
+    @apply pill text-warn;
+    background-color: oklch(0.62 0.13 65 / 0.12);
+  }
+  .pill-new {
+    @apply pill bg-brand-soft text-brand;
+  }
+  .pill-acknowledged {
+    @apply pill;
+    background: oklch(0.87 0.020 130);
+    color: oklch(0.36 0.018 145);
+  }
+  .pill-in-progress {
+    @apply pill;
+    background: oklch(0.94 0.055 90);
+    color: oklch(0.42 0.12 65);
+  }
+
+  /* Date/period chip — top-right pill */
+  .date-chip {
+    @apply inline-flex items-center gap-1.5 rounded-full bg-bg-muted px-3.5 py-1.5 text-[12.5px] font-medium text-ink;
+  }
+
+  /* Live status dot — breathing */
+  .dot-live {
+    @apply relative inline-flex w-2.5 h-2.5 rounded-full bg-brand;
+  }
+  .dot-live::after {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 9999px;
+    background: currentColor;
+    opacity: 0.35;
+    animation: breath 2.8s ease-in-out infinite;
+  }
+
+  /* Warning status dot — orange */
+  .dot-warn {
+    @apply relative inline-flex w-2.5 h-2.5 rounded-full;
+    background: oklch(0.62 0.13 65);
+  }
+  .dot-warn::after {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 9999px;
+    background: oklch(0.62 0.13 65);
+    opacity: 0.35;
+    animation: breath 2.8s ease-in-out infinite;
+  }
+
+  /* Ensure content sits above the grain overlay */
+  .above-grain {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Bricolage weight helpers (variable axes) */
+  .display-tight {
+    font-variation-settings: "wght" 700, "opsz" 96, "GRAD" -50;
+  }
+  .display-heavy {
+    font-variation-settings: "wght" 800, "opsz" 96, "GRAD" 100;
+  }
+}
+
+@layer utilities {
+  .tracking-display { letter-spacing: -0.025em; }
+  .tracking-tightish { letter-spacing: -0.015em; }
+  .leading-display { line-height: 0.96; }
+  .leading-prose { line-height: 1.7; }
+
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { scrollbar-width: none; }
+
+  .max-prose { max-width: 68ch; }
+}
