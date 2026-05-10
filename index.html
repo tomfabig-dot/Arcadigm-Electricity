@@ -5,8 +5,8 @@
     <link rel="icon" type="image/svg+xml" href="/arcadigm-icon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#f3ede3" />
-    <meta name="description" content="Arcadigm — electricity intelligence for Australian multi-site operators. CDR-powered NMI data, continuous monitoring, and trusted project delivery." />
-    <meta property="og:title" content="Arcadigm — Electricity Intelligence" />
+    <meta name="description" content="Arcadigm: electricity intelligence for Australian multi-site operators. CDR-powered NMI data, continuous monitoring, and trusted project delivery." />
+    <meta property="og:title" content="Arcadigm · Electricity Intelligence" />
     <meta property="og:description" content="CDR-powered NMI monitoring and project delivery for Australian C&I operators. See what you spend. Fix what you can. Verify what you did." />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="/og-image.svg" />
@@ -14,7 +14,73 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-    <title>Arcadigm — Electricity Intelligence</title>
+    <title>Arcadigm · Electricity Intelligence</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://arcadigm.com.au/#organization",
+            "name": "Arcadigm",
+            "url": "https://arcadigm.com.au/",
+            "logo": "https://arcadigm.com.au/arcadigm-icon.svg",
+            "description": "Arcadigm makes electricity simple — surfacing the no-cost actions that cut bills today and the higher-effort projects worth pursuing. CDR-powered NMI monitoring and trusted project delivery for Australian commercial and industrial operators.",
+            "email": "hello@arcadigm.com.au",
+            "telephone": "+61-405-470-279",
+            "address": { "@type": "PostalAddress", "addressCountry": "AU" },
+            "areaServed": { "@type": "Country", "name": "Australia" },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "customer support",
+              "email": "hello@arcadigm.com.au",
+              "telephone": "+61-405-470-279",
+              "areaServed": "AU",
+              "availableLanguage": "en"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://arcadigm.com.au/#website",
+            "url": "https://arcadigm.com.au/",
+            "name": "Arcadigm",
+            "description": "Electricity intelligence for Australian multi-site operators.",
+            "publisher": { "@id": "https://arcadigm.com.au/#organization" },
+            "inLanguage": "en-AU"
+          },
+          {
+            "@type": "Service",
+            "@id": "https://arcadigm.com.au/#service-free",
+            "name": "Free",
+            "serviceType": "Electricity data dashboard",
+            "category": "Energy management",
+            "description": "Connect sites via the Consumer Data Right (CDR) and see electricity spend, consumption profile, and tariff structure in one place. No commitment, no cost.",
+            "provider": { "@id": "https://arcadigm.com.au/#organization" },
+            "areaServed": { "@type": "Country", "name": "Australia" }
+          },
+          {
+            "@type": "Service",
+            "@id": "https://arcadigm.com.au/#service-monitor",
+            "name": "Monitor and Minimise",
+            "serviceType": "Continuous electricity monitoring",
+            "category": "Energy management",
+            "description": "Continuous NMI-level monitoring with anomaly detection and tariff/contract review. Surfaces no- and low-cost reductions including tariff optimisation, retailer comparison, demand-window shaping, and behaviour-driven savings.",
+            "provider": { "@id": "https://arcadigm.com.au/#organization" },
+            "areaServed": { "@type": "Country", "name": "Australia" }
+          },
+          {
+            "@type": "Service",
+            "@id": "https://arcadigm.com.au/#service-develop",
+            "name": "Develop and Decarbonise",
+            "serviceType": "Energy project delivery",
+            "category": "Energy services",
+            "description": "Scoped project delivery for higher-effort opportunities: solar, batteries, electrification, demand response, PPAs, and emissions-reduction initiatives. Trusted, verified outcomes.",
+            "provider": { "@id": "https://arcadigm.com.au/#organization" },
+            "areaServed": { "@type": "Country", "name": "Australia" }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

@@ -5,6 +5,14 @@
 [build.environment]
   NODE_VERSION = "20"
 
+# Unknown asset bundle paths must 404 instead of falling through to the SPA shell.
+# Real files in dist/assets/ are still served normally — static files take precedence over redirects.
+[[redirects]]
+  from = "/assets/*"
+  to = "/404.html"
+  status = 404
+
+# SPA client-side routing: every other unmatched path serves the React shell.
 [[redirects]]
   from = "/*"
   to = "/index.html"

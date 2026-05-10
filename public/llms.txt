@@ -1,0 +1,34 @@
+# Arcadigm
+
+> Arcadigm is an Australian electricity intelligence service for multi-site commercial and industrial (C&I) operators. We make electricity simple — surfacing the no-cost actions that cut bills today, and the higher-effort actions worth pursuing for the longer term. Our pipeline ingests National Metering Identifier (NMI) data via the Consumer Data Right (CDR) and turns interval-level consumption into clear, decision-ready insight.
+
+Arcadigm is structured as a three-tier journey: **Free** (see your spend), **Monitor and Minimise** (cut bills with no- and low-cost actions), and **Develop and Decarbonise** (deliver and verify higher-effort projects).
+
+## Who it's for
+
+Australian C&I operators, with a particular focus on small-to-mid-sized manufacturers running multiple sites or NMIs — businesses where electricity is a meaningful line item but where the data is fragmented across retailer portals, monthly invoices, and disconnected sub-meters.
+
+## The three tiers
+
+- **Free** — connect your sites via CDR and see electricity spend, consumption profile, and tariff structure in one place. No commitment, no cost.
+- **Monitor and Minimise** — continuous NMI-level monitoring with anomaly detection and tariff/contract review. Surfaces no- and low-cost reductions: tariff optimisation, retailer comparison, demand-window shaping, and behaviour-driven savings.
+- **Develop and Decarbonise** — scoped project delivery for higher-effort opportunities: solar, batteries, electrification, demand response, PPAs, and emissions-reduction initiatives. Trusted, verified outcomes.
+
+## Key concepts
+
+- **NMI** (National Metering Identifier) — the unique 10- or 11-digit identifier for an Australian electricity connection point. Each site has at least one NMI.
+- **CDR** (Consumer Data Right) — Australia's open-data regime, extended to the energy sector, that lets accredited providers fetch interval consumption data on a customer's behalf. Arcadigm uses CDR (via accredited intermediaries such as Fiskil) to ingest NMI data without manual file handling.
+- **NEM12** — the legacy AEMO file format for interval meter data; supported as a fallback where CDR is unavailable.
+- **C&I** — Commercial & Industrial; non-residential electricity customers.
+
+## Pages
+
+- [Home](https://arcadigm.com.au/): Overview of Arcadigm and the three-tier offering.
+- [Why Arcadigm](https://arcadigm.com.au/why-us): Differentiators — independence from retailers, CDR-native pipeline, multi-site focus.
+- [Process](https://arcadigm.com.au/process): How a site goes from CDR connection to first insight to delivered project.
+- [Track Record](https://arcadigm.com.au/track-record): Past projects and results.
+
+## Optional
+
+- [About](https://arcadigm.com.au/about): Team, values, and origin.
+- [Contact](https://arcadigm.com.au/contact): hello@arcadigm.com.au · +61 405 470 279.

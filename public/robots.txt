@@ -1,0 +1,11 @@
+# robots.txt for arcadigm.com.au
+# Policy: maximum AI visibility. All bots are welcome to crawl public marketing content.
+# Authenticated app routes are excluded.
+
+User-agent: *
+Allow: /
+Disallow: /portal
+Disallow: /sign-in
+Disallow: /sign-up
+
+Sitemap: https://arcadigm.com.au/sitemap.xml
