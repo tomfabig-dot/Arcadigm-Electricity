@@ -74,30 +74,11 @@ function Form() {
 
     const subjectLabel = topics.find((t) => t.value === topic)?.label ?? "";
 
-    // Note: web3forms' "Auto Response" body is configured on its dashboard,
-    // not via API. Until that's set up, we include this acknowledgement field
-    // in the payload so the customer (CC'd via cc: email) sees a friendly note
-    // alongside their form copy. Remove this field once the dashboard
-    // auto-response is live.
-    const acknowledgement = [
-      `Hi ${name},`,
-      "",
-      "Thanks for getting in touch with Arcadigm. We've received your message and will come back to you as soon as we can.",
-      "",
-      "In the meantime, if you'd like to test the portal, you can sign up for free at https://arcadigm.com.au/sign-up.",
-      "",
-      "Thanks for your enquiry.",
-      "",
-      "Arcadigm · hello@arcadigm.com.au · arcadigm.com.au",
-    ].join("\n");
-
     const payload = {
       access_key: WEB3FORMS_KEY,
       subject: `Arcadigm enquiry · ${subjectLabel}`,
       from_name: `Arcadigm website · ${name}`,
       replyto: email,
-      cc: email,
-      acknowledgement,
       name,
       email,
       company: company || "-",
@@ -155,7 +136,7 @@ function Form() {
               </h2>
             </div>
             <p className="mt-md-2 text-body-l text-ink-muted leading-prose">
-              A copy has been sent to your inbox. We'll reply to{" "}
+              We'll reply to{" "}
               {email ? (
                 <span className="text-ink font-medium">{email}</span>
               ) : (
