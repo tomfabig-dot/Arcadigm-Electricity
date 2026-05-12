@@ -1,7 +1,7 @@
 import { useState, FormEvent } from "react";
 import { ArrowUpRight, Check } from "lucide-react";
 
-const EMAIL = "hello@arcadigm.net";
+const EMAIL = "hello@arcadigm.com.au";
 const WEB3FORMS_KEY = "72ad431e-b08d-4065-aee3-4dfedf0a7b7b";
 
 type Topic = "general" | "pricing" | "project" | "press";
@@ -10,7 +10,7 @@ type Status = "idle" | "sending" | "sent" | "error";
 const topics: { value: Topic; label: string }[] = [
   { value: "general", label: "General enquiry" },
   { value: "pricing", label: "Pricing & plans" },
-  { value: "project", label: "Project delivery" },
+  { value: "project", label: "Project planning" },
   { value: "press", label: "Press / partnerships" },
 ];
 

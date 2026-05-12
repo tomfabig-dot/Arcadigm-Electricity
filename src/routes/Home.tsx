@@ -6,8 +6,8 @@ export default function Home() {
     <>
       <Hero />
       <Promise />
-      <Pricing />
       <HowItWorks />
+      <Pricing />
       <Evidence />
     </>
   );
@@ -593,9 +593,10 @@ function Pricing() {
             Three ways to work with us.
           </h2>
           <p className="mt-md-2 text-body-l text-ink-muted max-prose leading-prose">
-            Every plan gets a CDR connection, portal access, and a report.
-            Start on Free. Launch customers
-            pay half-price on both paid plans for the first year.
+            Every plan gets an NMI smart meter connection, access to this data,
+            analytics, and a report. Start on Free if you'd like to test it out
+            first. Launch customers pay half-price on both paid plans for the
+            first year.
           </p>
         </header>
 
@@ -747,7 +748,7 @@ const steps = [
   {
     index: "01",
     title: "Sign up",
-    lede: "Quick data access through Fiskil. No hardware required, or site visit. Your portal and historic data are ready in minutes.",
+    lede: "Quick smart meter data access through our partner Fiskil. No additional hardware required, or site visits. Your historic data and analytics are ready in minutes.",
     meta: ["~5 minutes", "No additional hardware", "Consumer Data Right"],
     align: "left" as const,
   },
@@ -762,7 +763,7 @@ const steps = [
   {
     index: "03",
     title: "Understand how you can manage your consumption",
-    lede: "Suggested improvements are then provided. These include non-capex based improvements, and provide perspective on which capex projects could best suit your site.",
+    lede: "Suggested improvements are then provided. Depending on your plan, these can include non-capex based improvements, and provide perspective on which capex projects could best suit your site. We make sure we come back to you with this within 5 business days.",
     meta: ["5 business days", "Per-site plan", "Payback estimates"],
     align: "left" as const,
   },
@@ -781,8 +782,8 @@ function HowItWorks() {
             From sign-up to a clear plan, in a week.
           </h2>
           <p className="mt-md-2 text-body-l text-ink-muted max-prose leading-prose">
-            Your data is in the portal the moment you sign up. If you'd like
-            a human to walk you through it, that takes five business days.
+            Your smart meter data can be found in our portal the moment you
+            sign up, giving you quick access to immediately useful information.
           </p>
         </header>
 
