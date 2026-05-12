@@ -82,9 +82,9 @@ function Form() {
       cc: email,
       name,
       email,
-      company: company || "—",
+      company: company || "-",
       topic: subjectLabel,
-      sites: sites || "—",
+      sites: sites || "-",
       message,
     };
 

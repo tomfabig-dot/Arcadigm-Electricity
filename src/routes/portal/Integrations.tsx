@@ -398,8 +398,8 @@ function ConfigureMeterDialog({
 
   useEffect(() => {
     if (open) {
-      setNmi(existing && existing.nmi !== "—" ? existing.nmi : "");
-      setProvider(existing && existing.provider !== "—" ? existing.provider : "Fiskil (CDR)");
+      setNmi(existing && existing.nmi !== "-" ? existing.nmi : "");
+      setProvider(existing && existing.provider !== "-" ? existing.provider : "Fiskil (CDR)");
       setError(null);
     }
   }, [open, existing]);

@@ -66,7 +66,7 @@ const CIRCUIT_ROWS: { n: string; p: number; c: string }[] = [
 const NMI_BY_SITE: Record<string, string> = {
   "1": "2001234567",
   "2": "6305432109",
-  "3": "—",
+  "3": "-",
 };
 
 export default function SiteDetail() {
@@ -128,7 +128,7 @@ export default function SiteDetail() {
   const costForRange = site ? Math.round(site.cost7d * rangeFactor.cost) : 0;
   const carbonForRange = site ? +(site.carbon7dT * rangeFactor.carbon).toFixed(2) : 0;
   const totalMwhForRange = site ? (site.monthlyKwh * rangeFactor.kwh) / 1000 : 0;
-  const nmi = id ? NMI_BY_SITE[id] ?? "—" : "—";
+  const nmi = id ? NMI_BY_SITE[id] ?? "-" : "-";
   const heatmapData = useMemo(
     () => (site ? buildHeatmapData(range, site.livePeakKw) : null),
     [range, site],
@@ -274,7 +274,7 @@ export default function SiteDetail() {
                   stroke="#b78a2b"
                   strokeDasharray="4 4"
                   label={{
-                    value: `Peak demand — ${peakForRange} kW`,
+                    value: `Peak demand: ${peakForRange} kW`,
                     position: "insideTopRight",
                     fontSize: 11,
                     fontWeight: 600,
@@ -493,7 +493,7 @@ export default function SiteDetail() {
         open={reportsOpen}
         onClose={() => setReportsOpen(false)}
         title="Site reports"
-        subtitle={`${site.name} — ${siteReports.length} available`}
+        subtitle={`${site.name} · ${siteReports.length} available`}
       >
         {siteReports.length === 0 ? (
           <p className="text-sm text-ink-muted">
@@ -773,7 +773,7 @@ function buildHeatmapData(range: Range, peak: number): HeatmapData {
       unit: "kW",
       cellHeight: 28,
       subtitle: "Hour-of-day, intensity = avg kW",
-      tooltip: (_r, c, v) => `${c}:00 — ${v} kW`,
+      tooltip: (_r, c, v) => `${c}:00 · ${v} kW`,
     };
   }
   if (range === "7d") {
@@ -792,7 +792,7 @@ function buildHeatmapData(range: Range, peak: number): HeatmapData {
       unit: "kW",
       cellHeight: 22,
       subtitle: "Day-of-week × hour-of-day, intensity = avg kW",
-      tooltip: (r, c, v) => `${WEEKDAYS_SHORT[r]} ${c}:00 — ${v} kW`,
+      tooltip: (r, c, v) => `${WEEKDAYS_SHORT[r]} ${c}:00 · ${v} kW`,
     };
   }
   if (range === "30d") {
@@ -824,7 +824,7 @@ function buildHeatmapData(range: Range, peak: number): HeatmapData {
       unit: "kW",
       cellHeight: 14,
       subtitle: "Day × hour-of-day, intensity = avg kW",
-      tooltip: (r, c, v) => `${rowLabels[r]} ${c}:00 — ${v} kW`,
+      tooltip: (r, c, v) => `${rowLabels[r]} ${c}:00 · ${v} kW`,
     };
   }
   const months = range === "6m" ? 6 : 12;
@@ -870,7 +870,7 @@ function buildHeatmapData(range: Range, peak: number): HeatmapData {
     unit: "kWh",
     cellHeight: 28,
     subtitle: "Month × day-of-week, total kWh",
-    tooltip: (r, c, v) => `${rowLabels[r]} · ${WEEKDAYS_SHORT[c]} — ${v.toLocaleString()} kWh`,
+    tooltip: (r, c, v) => `${rowLabels[r]} · ${WEEKDAYS_SHORT[c]} · ${v.toLocaleString()} kWh`,
   };
 }
 

@@ -274,7 +274,7 @@ function AISummary({ totalSavings, prevMonth }: { totalSavings: number; prevMont
             <span className="font-semibold text-brand">+2.4% above {prevMonth}</span> and{" "}
             <span className="font-semibold text-ink">+10% year-on-year</span>, led by Ringwood
             Retail Park running 12% above benchmark. Refrigeration and HVAC optimisation stand
-            out as the highest-leverage opportunities this cycle —{" "}
+            out as the highest-leverage opportunities this cycle, with{" "}
             <span className="font-semibold text-brand">~{gbp(totalSavings)}/yr</span> sits open
             across your estate.
           </p>

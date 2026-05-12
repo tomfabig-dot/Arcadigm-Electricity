@@ -24,10 +24,7 @@ function Header() {
           }}
         >
           Constant monitoring.{" "}
-          <span className="text-ink-muted">
-            Notification updates for critical improvements, and a detailed
-            database to underpin future investment decisions.
-          </span>
+          <span className="text-brand">Continual improvement.</span>
         </h1>
         <p
           className="mt-lg-2 text-body-l text-ink-muted max-prose leading-prose animate-fade-up"
@@ -41,7 +38,7 @@ function Header() {
   );
 }
 
-/* ── Two approaches — paired row-by-row so the contrast is unmistakable ── */
+/* Two approaches, paired row-by-row so the contrast is unmistakable */
 
 const rows = [
   {
@@ -63,7 +60,7 @@ const rows = [
     },
     neu: {
       h: "Notifications, with periodic reporting",
-      b: "Anomalies and changes surface as notifications when they happen, with the dollar impact next to each one. Reports follow on a cadence that suits your site.",
+      b: "Anomalies are reported as notifications when they happen, with the dollar impact next to each one to facilitate change. Routine reports and detailed data to underpin future investment decisions.",
     },
   },
   {
@@ -73,19 +70,19 @@ const rows = [
       b: "Recommendations are handed to you. Your team manages quotes, contractors, and the install.",
     },
     neu: {
-      h: "We can deliver the fix",
-      b: "When a project makes sense, we scope, quote, and install. One team, end-to-end, so you aren't chasing contractors.",
+      h: "We help you organise delivery",
+      b: "When a project makes sense, we help connect you with our trusted engineering partners to simplify the process to get a quote and install. This integrated approach means you aren't chasing contractors.",
     },
   },
   {
-    dimension: "Billing",
+    dimension: "Verification",
     old: {
       h: "Savings reported on paper",
       b: "Claimed savings live in the spreadsheet. Whether the meter actually agrees is a later question.",
     },
     neu: {
-      h: "Paid from the savings",
-      b: "On project work our fee comes out of what the meter saves, measured against your pre-project baseline.",
+      h: "Monitor change",
+      b: "Ongoing data connection allows you to monitor how implementing a project has impacted your electricity use.",
     },
   },
 ];
@@ -143,7 +140,7 @@ function Comparison() {
                 </p>
               </div>
 
-              {/* The usual way — muted, lighter, no accent */}
+              {/* The usual way (muted, lighter, no accent) */}
               <div className="md:pr-lg-2 opacity-80">
                 <p className="md:hidden font-mono text-micro uppercase tracking-[0.18em] text-ink-faint mb-2xs">
                   The usual way
@@ -159,7 +156,7 @@ function Comparison() {
                 </p>
               </div>
 
-              {/* Arcadigm — full contrast, live dot, stronger weight */}
+              {/* Arcadigm (full contrast, live dot, stronger weight) */}
               <div className="md:pl-lg-2 md:border-l md:border-ink-hairline">
                 <p className="md:hidden font-mono text-micro uppercase tracking-[0.18em] text-brand mb-2xs inline-flex items-center gap-1.5">
                   <span className="dot-live" aria-hidden />

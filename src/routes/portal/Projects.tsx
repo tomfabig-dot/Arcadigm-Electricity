@@ -167,7 +167,7 @@ export default function Projects() {
             <div className="grid grid-cols-2 gap-3 mt-5">
               <MiniStat
                 label="ROI Estimate"
-                value={payback > 0 ? `${(payback * 12).toFixed(1)} Months` : "—"}
+                value={payback > 0 ? `${(payback * 12).toFixed(1)} Months` : "-"}
               />
               <MiniStat
                 label="CO₂ Reduction"
@@ -212,7 +212,7 @@ export default function Projects() {
 
           <p className="text-[11.5px] text-ink-faint leading-relaxed">
             These figures are illustrative. Arcadigm manages full project delivery on a
-            shared-savings model — you pay nothing upfront.
+            shared-savings model, so you pay nothing upfront.
           </p>
         </div>
       </div>

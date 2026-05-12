@@ -175,7 +175,7 @@ export default function PortalLayout() {
           </span>
           <p className="text-amber-900 leading-snug">
             <strong className="font-semibold">Demo environment.</strong>{" "}
-            All figures shown are placeholder data — not a live meter. Currency
+            All figures shown are placeholder data, not a live meter. Currency
             displayed in AUD.
           </p>
         </div>

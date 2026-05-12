@@ -55,7 +55,7 @@ export default function SignUp() {
   return (
     <section className="min-h-[calc(100dvh-80px)] border-t border-ink-hairline">
       <div className="grid lg:grid-cols-[1.05fr_1fr] min-h-[calc(100dvh-80px)]">
-        {/* Left — editorial panel */}
+        {/* Left: editorial panel */}
         <aside className="hidden lg:flex flex-col justify-between bg-paper-2 border-r border-ink-hairline p-2xl-2 relative overflow-hidden">
           <div>
             <p className="eyebrow">Get started · three steps</p>
@@ -128,18 +128,18 @@ export default function SignUp() {
 
           {/* Launch offer ribbon */}
           <div className="max-w-md pt-lg-2 border-t border-ink-hairline">
-            <p className="eyebrow text-brand">Launch offer · first year</p>
+            <p className="eyebrow text-brand">Launch offer · first 20 sites</p>
             <p
               className="mt-2xs font-display text-[20px] tracking-tightish text-ink leading-[1.35]"
               style={{ fontVariationSettings: '"wght" 550, "opsz" 36, "GRAD" 0' }}
             >
-              50% off Monitor and Report for your first year. Applied when you
-              sign up — no code needed. The free tier stays free.
+              50% off for life for our first 20 sites. Launch customers also get
+              a free product walkthrough and extended support.
             </p>
           </div>
         </aside>
 
-        {/* Right — form panel */}
+        {/* Right: form panel */}
         <div className="flex items-center justify-center p-xl-2 md:p-2xl-2">
           <div className="w-full max-w-[440px]">
             <p className="eyebrow">Sign up · early access</p>
@@ -152,23 +152,23 @@ export default function SignUp() {
             <p className="mt-md-2 text-body-l text-ink-muted leading-prose">
               We're setting up customer workspaces by hand while we're in early access. Walk the
               demo account first to see what you're getting, then send us a note and we'll
-              have yours ready — usually the same business day.
+              have yours ready, usually the same business day.
             </p>
 
-            {/* Launch offer — mobile-visible */}
+            {/* Launch offer: mobile-visible */}
             <div className="mt-xl-2 pt-md-2 border-t border-ink-hairline lg:hidden">
               <p className="font-mono text-micro uppercase tracking-[0.16em] text-brand">
-                Launch offer · first year
+                Launch offer · first 20 sites
               </p>
               <p className="mt-2xs text-ui text-ink leading-prose">
-                50% off Monitor and Report for your first year. Applied at sign-up — no code needed.
+                50% off for life for our first 20 sites. Launch customers also get a free product walkthrough and extended support.
               </p>
             </div>
 
-            {/* Demo — hairline block, no card */}
+            {/* Demo: hairline block, no card */}
             <div className="mt-xl-2 pt-md-2 border-t border-ink-hairline">
               <p className="font-mono text-micro uppercase tracking-[0.16em] text-ink-faint">
-                Walk the portal — demo account
+                Walk the portal · demo account
               </p>
               <dl className="mt-md-2 space-y-xs">
                 <div className="grid grid-cols-[96px_1fr] gap-md-2 items-baseline">

@@ -34,7 +34,7 @@ export default function SignIn() {
     e.preventDefault();
     if (!validateCredentials(email, password)) {
       setErr(
-        `Invalid credentials. This is a demo environment — sign in with ${DEMO_EMAIL} / ${DEMO_PASSWORD}.`,
+        `Invalid credentials. This is a demo environment. Sign in with ${DEMO_EMAIL} / ${DEMO_PASSWORD}.`,
       );
       return;
     }
@@ -77,7 +77,7 @@ export default function SignIn() {
 
             <Separator />
 
-            {/* Demo account note — no card, just a hairline block */}
+            {/* Demo account note (no card, just a hairline block) */}
             <div className="mt-lg-2 pt-md-2 border-t border-ink-hairline flex items-start gap-md-2">
               <div className="flex-1">
                 <p className="font-mono text-micro uppercase tracking-[0.16em] text-ink-faint">

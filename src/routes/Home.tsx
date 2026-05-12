@@ -7,7 +7,6 @@ export default function Home() {
       <Hero />
       <Promise />
       <Pricing />
-      <ProjectDelivery />
       <HowItWorks />
       <Evidence />
     </>
@@ -39,26 +38,23 @@ function Hero() {
               className="mt-md-2 text-body-l text-ink-muted max-prose leading-prose animate-fade-up"
               style={{ animationDelay: "140ms" }}
             >
-              Arcadigm gives Australian businesses a clear view of every meter.
-              We connect through the Consumer Data Right — your data is in the
-              portal the moment you sign up. Want a written readout with
-              recommendations? It lands in five business days.
+              Arcadigm helps you understand your electricity usage, and what
+              you can do about it.
             </p>
           </div>
 
-          {/* Launch offer — right column */}
+          {/* Launch offer - right column */}
           <div
             className="animate-fade-up lg:pl-xl-2 lg:border-l lg:border-ink-hairline"
             style={{ animationDelay: "220ms" }}
           >
             <p className="eyebrow" style={{ color: "oklch(0.34 0.075 155)" }}>
-              <span className="dot-warn" aria-hidden /> Launch offer · currently in testing
+              <span className="dot-warn" aria-hidden /> Launch offer · first 20 sites
             </p>
             <p className="mt-2xs text-ui text-ink leading-prose">
-              <span className="font-mono">50% off</span> your first year of{" "}
-              <span className="font-medium">Monitor &amp; Minimise</span> or{" "}
-              <span className="font-medium">Develop &amp; Decarbonise</span>.
-              Applied at sign-up, no code needed.
+              <span className="font-semibold">50% off for life</span> for our
+              first 20 sites. Launch customers also get a free product
+              walkthrough and extended support.
             </p>
 
             <div className="mt-md-2 flex items-center gap-md-2 flex-wrap">
@@ -72,29 +68,12 @@ function Hero() {
           </div>
         </div>
 
-        {/* Graphic — full width horizontal below */}
+        {/* Graphic - full width horizontal below */}
         <div
           className="mt-lg-2 animate-fade-up"
           style={{ animationDelay: "300ms" }}
         >
           <LiveReadout />
-        </div>
-
-        {/* Trust strip */}
-        <div
-          className="mt-lg-2 pt-md-2 border-t border-ink-hairline animate-fade-up"
-          style={{ animationDelay: "440ms" }}
-        >
-          <div className="grid gap-lg-2 md:grid-cols-[auto_1fr] md:items-end md:gap-2xl-2">
-            <div className="grid grid-cols-3 gap-x-xl-2 gap-y-md-2 md:flex md:gap-2xl-2">
-              <Metric label="Sites connected" value="47" unit="live" />
-              <Metric label="Data points / day" value="2.41" unit="M" />
-              <Metric label="Median bill reduction" value="23.4" unit="%" />
-            </div>
-            <p className="font-mono text-micro uppercase tracking-[0.16em] text-ink-faint leading-[1.6] md:text-right md:max-w-[320px] md:justify-self-end">
-              Figures from Optimal Monitoring (UK) — our monitoring partner. Australian data pending launch.
-            </p>
-          </div>
         </div>
       </div>
     </section>
@@ -144,7 +123,7 @@ function LiveReadout() {
           />
           <SceneLabel
             n="03"
-            label="Reports"
+            label="Reports + notifications"
             items={["Data analysed", "Reports provided", "Improvements acted on"]}
           />
           <SceneLabel
@@ -165,7 +144,7 @@ function SceneLabel({ n, label, items }: { n: string; label: string; items: stri
         {n}
       </span>
       <span
-        className="font-display text-[22px] tracking-tightish text-ink leading-[1.2]"
+        className="font-display text-[22px] tracking-tightish text-ink leading-[1.2] min-h-[2.4em] flex items-start justify-center"
         style={{ fontVariationSettings: '"wght" 700, "opsz" 36, "GRAD" 0' }}
       >
         {label}
@@ -186,7 +165,7 @@ function SceneLabel({ n, label, items }: { n: string; label: string; items: stri
 }
 
 function SceneIllustration() {
-  // viewBox: 1200 x 240 — icons centered on 4-column grid below (centers at x=150, 450, 750, 1050)
+  // viewBox: 1200 x 240, icons centered on 4-column grid below (centers at x=150, 450, 750, 1050)
   return (
     <div className="relative">
       <svg
@@ -280,7 +259,7 @@ function SceneIllustration() {
           strokeLinecap="round"
         />
 
-        {/* ── Single traveling pulse — passes behind meter, reports, chart ── */}
+        {/* Single traveling pulse: passes behind meter, reports, chart */}
         <circle r="2.4" fill="oklch(0.34 0.075 155)">
           <animateMotion
             dur="8s"
@@ -375,7 +354,7 @@ function SceneIllustration() {
           <rect x="8" y="24" width="62" height="1.4" fill="oklch(0.22 0.018 150)" opacity="0.3" />
           <rect x="8" y="29" width="48" height="1.4" fill="oklch(0.22 0.018 150)" opacity="0.3" />
 
-          {/* mini sparkline — trending down */}
+          {/* mini sparkline, trending down */}
           <path
             d="M 8 42 C 20 39, 30 41, 40 40 C 50 39, 58 35, 66 33"
             stroke="oklch(0.34 0.075 155)"
@@ -429,7 +408,7 @@ function SceneIllustration() {
             BASELINE
           </text>
 
-          {/* descending line (the saving) — area fill first */}
+          {/* descending line (the saving), area fill first */}
           <path
             d="M 0 30 C 28 40, 48 52, 68 62 C 92 74, 116 104, 140 128 C 152 140, 162 148, 170 154 L 170 170 L 0 170 Z"
             fill="oklch(0.34 0.075 155)"
@@ -507,7 +486,7 @@ function Promise() {
           {[
             "Are you on a good electricity contract?",
             "What can you do without spending to reduce your energy bills?",
-            "What would the highest-impact projects look like if you want to reduce your energy spend?",
+            "What are the highest-impact projects to reduce your energy spend?",
           ].map((q, i) => (
             <li
               key={q}
@@ -549,7 +528,7 @@ const tiers: Tier[] = [
     name: "Free",
     tagline: "Assess your usage and compare to other contracts.",
     year1: "$0",
-    year1Note: "always — no card required",
+    year1Note: "always free, no card required",
     cta: { label: "Start for free", href: "/sign-up", variant: "secondary" },
   },
   {
@@ -586,7 +565,7 @@ const featureMatrix: FeatureRow[] = [
   { group: "Connect", label: "CDR connection to your retailer", free: true, mm: true, dd: true },
   { group: "Connect", label: "30-minute meter data, back-filled*", free: true, mm: true, dd: true },
   // Portal
-  { group: "Portal", label: "Portal access — simple view", free: true, mm: true, dd: true },
+  { group: "Portal", label: "Portal access (simple view)", free: true, mm: true, dd: true },
   { group: "Portal", label: "Anomaly alerts, with notifications", free: false, mm: true, dd: true },
   { group: "Portal", label: "AI-identified savings (EMMA AI)", free: false, mm: true, dd: true },
   { group: "Portal", label: "Project assessment tools in the portal", free: false, mm: true, dd: true },
@@ -623,35 +602,33 @@ function Pricing() {
         <div className="overflow-x-auto -mx-5 sm:-mx-8 lg:-mx-12 px-5 sm:px-8 lg:px-12">
           <table className="w-full border-collapse min-w-[720px]">
             <thead>
-              <tr className="border-y border-ink-hairline align-bottom">
-                <th scope="col" className="text-left py-sm-2 pr-md-2 w-[34%]">
+              <tr className="border-y border-ink-hairline align-top">
+                <th scope="col" className="text-left py-md-2 pr-md-2 w-[34%]">
                   <p className="eyebrow">Compare plans</p>
                 </th>
                 {tiers.map((t) => (
                   <th
                     key={t.key}
                     scope="col"
-                    className={`text-left align-bottom py-sm-2 px-md-2 w-[22%] ${
+                    className={`text-left align-top py-md-2 px-md-2 w-[22%] ${
                       t.highlight ? "bg-paper-card" : ""
                     }`}
                   >
                     <h3
-                      className="font-display text-[20px] tracking-tightish text-ink leading-[1.15]"
+                      className="font-display text-[20px] tracking-tightish text-ink leading-[1.15] min-h-[2.3em]"
                       style={{ fontVariationSettings: '"wght" 700, "opsz" 36, "GRAD" 0' }}
                     >
                       {t.name}
                     </h3>
-                    <div className="mt-xs pt-xs border-t border-ink-hairline/70">
-                      <p className="flex items-baseline gap-xs">
-                        <span className="num text-[26px] font-medium text-ink leading-none">
-                          {t.year1}
-                        </span>
-                        <span className="font-mono text-micro uppercase tracking-[0.14em] text-ink-faint">
-                          {t.year1Note}
-                        </span>
+                    <div className="mt-md-2 pt-sm-2 border-t border-ink-hairline/70">
+                      <p className="num text-[28px] font-medium text-ink leading-none">
+                        {t.year1}
+                      </p>
+                      <p className="mt-2xs text-caption text-ink-faint leading-[1.4]">
+                        {t.year1Note}
                       </p>
                       {t.ongoing && (
-                        <p className="mt-2xs text-caption text-ink-muted num">
+                        <p className="mt-2xs text-caption text-ink-muted leading-[1.4]">
                           {t.ongoing}
                         </p>
                       )}
@@ -764,64 +741,28 @@ function PricingCTA({ tier }: { tier: Tier }) {
   );
 }
 
-/* ─────────────────────────── PROJECT DELIVERY ─────────────────────────── */
-
-function ProjectDelivery() {
-  return (
-    <section className="py-3xl-2 border-t border-ink-hairline" id="project-delivery">
-      <div className="container-edit">
-        <header className="mb-xl-2">
-          <p className="eyebrow">Project delivery · separate service</p>
-          <h2
-            className="mt-md-2 font-display text-display-l tracking-display leading-[1.02] text-ink max-w-3xl"
-            style={{ fontVariationSettings: '"wght" 700, "opsz" 96, "GRAD" 0' }}
-          >
-            We can help you deliver the projects, too.{" "}
-            <span className="text-ink-muted">Zero upfront capex.</span>
-          </h2>
-          <p className="mt-md-2 text-body-l text-ink-muted max-prose leading-prose">
-            Once a shortlist is worth building, we can help you build it. You
-            don't need to lay out capital; our fee comes out of what the meter
-            actually saves. We're growing a database of customer sites so we
-            can negotiate competitive rates with engineers, delivering a high,
-            consistent standard across every project.
-          </p>
-        </header>
-
-        <div className="flex flex-wrap gap-md-2">
-          <a
-            href="mailto:hello@arcadigm.com.au?subject=Project%20delivery"
-            className="btn-primary"
-          >
-            Talk to us <ArrowUpRight className="w-4 h-4" strokeWidth={1.75} />
-          </a>
-        </div>
-      </div>
-    </section>
-  );
-}
-
 /* ─────────────────────────── HOW IT WORKS ─────────────────────────── */
 
 const steps = [
   {
     index: "01",
     title: "Sign up",
-    lede: "Two-click consent through Fiskil. No hardware, no site visit. Your portal is ready in minutes, and your historic data back-fills within the hour.",
-    meta: ["About 2 minutes", "No hardware", "Consumer Data Right"],
+    lede: "Quick data access through Fiskil. No hardware required, or site visit. Your portal and historic data are ready in minutes.",
+    meta: ["~5 minutes", "No additional hardware", "Consumer Data Right"],
     align: "left" as const,
   },
   {
     index: "02",
     title: "Explore your data",
-    lede: "Every site, every 30 minutes, tariff-aware and weather-normalised. Browse on your own, or let us walk you through what we're seeing.",
-    meta: ["Live portal", "Weather-normalised", "Tariff overlay"],
+    lede: "Every site with high resolution.* Includes standard assessments and our project assessment tools to show you project ROI based on your specific information.",
+    meta: ["Live portal", "Tariff overlay"],
+    footnote: "* Resolution limited to smart meter installed.",
     align: "right" as const,
   },
   {
     index: "03",
-    title: "Get your written readout",
-    lede: "Want more than the portal? Within five business days you'll have a written report per site — what's working, what isn't, and what it's worth to fix.",
+    title: "Understand how you can manage your consumption",
+    lede: "Suggested improvements are then provided. These include non-capex based improvements, and provide perspective on which capex projects could best suit your site.",
     meta: ["5 business days", "Per-site plan", "Payback estimates"],
     align: "left" as const,
   },
@@ -860,17 +801,19 @@ function Step({
   title,
   lede,
   meta,
+  footnote,
   align,
 }: {
   index: string;
   title: string;
   lede: string;
   meta: string[];
+  footnote?: string;
   align: "left" | "right";
 }) {
   return (
     <li
-      className={`grid gap-md-2 md:gap-lg-2 items-start ${
+      className={`grid gap-md-2 md:gap-lg-2 items-center ${
         align === "left"
           ? "md:grid-cols-[1fr_1.6fr]"
           : "md:grid-cols-[1.6fr_1fr] md:[&>*:first-child]:order-2"
@@ -883,10 +826,10 @@ function Step({
         >
           {index}
         </span>
-        <span className="eyebrow">Step · {title}</span>
+        <span className="eyebrow">Step</span>
       </div>
 
-      <div>
+      <div className={align === "right" ? "md:ml-auto md:max-w-[560px]" : ""}>
         <h3
           className="font-display text-display-m tracking-display leading-[1.05] text-ink"
           style={{ fontVariationSettings: '"wght" 700, "opsz" 64, "GRAD" 0' }}
@@ -903,6 +846,12 @@ function Step({
             </li>
           ))}
         </ul>
+
+        {footnote && (
+          <p className="mt-md-2 text-caption text-ink-faint max-prose leading-prose">
+            {footnote}
+          </p>
+        )}
       </div>
     </li>
   );
@@ -915,7 +864,7 @@ const evidence = [
     kicker: "EMMA AI · UK · Cambridge",
     sector: "Cambridge institution · mixed-use estate",
     head: "Hidden waste in a mixed-use estate, priced in pounds.",
-    body: "EMMA pulled billing, BMS, solar and sub-meter data across offices, production and learning spaces — surfacing out-of-hours HVAC, bad time clocks, and inefficient AHU cycles. Every anomaly came priced, so facilities could act the same week.",
+    body: "EMMA pulled billing, BMS, solar and sub-meter data across offices, production and learning spaces, surfacing out-of-hours HVAC, bad time clocks, and inefficient AHU cycles. Every anomaly came priced, so facilities could act the same week.",
     metrics: [
       { value: "8", unit: "£k / yr", label: "per fix" },
       { value: "45", unit: "%", label: "emissions cut" },
@@ -927,7 +876,7 @@ const evidence = [
     kicker: "EMMA AI · UK · HTEC",
     sector: "HTEC · 46k sq ft HQ · Southampton",
     head: "£5,000 in annual savings, found in the first month.",
-    body: "HTEC's mixed-use headquarters blends manufacturing with sub-tenants — and had no visibility into who used what. EMMA split the site into 11 monitored zones (lighting, HVAC, IT, production), surfacing savings within weeks and making sub-tenant billing fair.",
+    body: "HTEC's mixed-use headquarters blends manufacturing with sub-tenants, and had no visibility into who used what. EMMA split the site into 11 monitored zones (lighting, HVAC, IT, production), surfacing savings within weeks and making sub-tenant billing fair.",
     metrics: [
       { value: "5", unit: "£k / yr", label: "found in month 1" },
       { value: "11", unit: "zones", label: "sub-metered" },
@@ -961,6 +910,9 @@ function Evidence() {
             , our UK monitoring partner. They are not Arcadigm customers. Their
             EMMA AI engine identified the savings and measured each one on the
             meter. Arcadigm now runs the same engine on Australian sites.
+          </p>
+          <p className="mt-sm-2 text-body-l text-brand max-prose leading-prose font-bold">
+            We seek to validate these findings in Australia.
           </p>
         </header>
 
@@ -1020,6 +972,19 @@ function Evidence() {
               </div>
             </article>
           ))}
+        </div>
+
+        <div className="mt-2xl-2 pt-lg-2 border-t border-ink-hairline">
+          <div className="grid gap-lg-2 md:grid-cols-[auto_1fr] md:items-end md:gap-2xl-2">
+            <div className="grid grid-cols-3 gap-x-xl-2 gap-y-md-2 md:flex md:gap-2xl-2">
+              <Metric label="Sites connected" value="47" unit="live" />
+              <Metric label="Data points / day" value="2.41" unit="M" />
+              <Metric label="Median bill reduction" value="23.4" unit="%" />
+            </div>
+            <p className="font-mono text-micro uppercase tracking-[0.16em] text-ink-faint leading-[1.6] md:text-right md:max-w-[320px] md:justify-self-end">
+              Figures from Optimal Monitoring (UK), our monitoring partner. Australian data pending launch.
+            </p>
+          </div>
         </div>
 
         <div className="mt-xl-2 pt-lg-2 border-t border-ink-hairline flex flex-wrap items-center justify-between gap-md-2">

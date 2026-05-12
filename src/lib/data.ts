@@ -20,7 +20,7 @@ export type Site = {
 export const sites: Site[] = [
   {
     id: "1",
-    name: "Parkside Supermarket — Adelaide",
+    name: "Parkside Supermarket, Adelaide",
     address: "132 Greenhill Rd, Parkside, SA 5063",
     type: "Retail",
     status: "Healthy",
@@ -50,7 +50,7 @@ export const sites: Site[] = [
   },
   {
     id: "3",
-    name: "Ringwood Retail Park — Melbourne",
+    name: "Ringwood Retail Park, Melbourne",
     address: "200 Maroondah Hwy, Ringwood, VIC 3134",
     type: "Retail",
     status: "Input Data Fault",
@@ -98,7 +98,7 @@ export const improvements: Improvement[] = [
     savingsPerYear: 22_400,
     estimatedProjectCost: 2_500,
     detail:
-      "Refrigeration power draw has increased by 14% over the past 6 weeks without a corresponding change in ambient temperature. This pattern is consistent with condenser coil fouling — a relatively low-cost maintenance fix.",
+      "Refrigeration power draw has increased by 14% over the past 6 weeks without a corresponding change in ambient temperature. This pattern is consistent with condenser coil fouling, which is a relatively low-cost maintenance fix.",
   },
   {
     id: "imp-2",
@@ -240,7 +240,7 @@ export const projectTypes: ProjectType[] = [
     tagTone: "teal",
     delivery: "6w delivery",
     description:
-      "Retrofit of VSDs to AHU fan motors and pumps. Savings scale with existing oversizing — typically 20-40% reduction in HVAC electrical load.",
+      "Retrofit of VSDs to AHU fan motors and pumps. Savings scale with existing oversizing, typically 20-40% reduction in HVAC electrical load.",
     typicalSaving: "~15%",
     payback: "2yr",
     loadLabel: "HVAC & fan loads",
@@ -353,7 +353,7 @@ export const teamMembers: TeamMember[] = [
     name: "James Whitfield",
     email: "j.whitfield@parkside-retail.com.au",
     role: "Regional Manager",
-    sites: ["Parkside Supermarket — Adelaide", "Dandenong Cold Store"],
+    sites: ["Parkside Supermarket, Adelaide", "Dandenong Cold Store"],
     status: "Active",
     lastActive: "Yesterday",
   },
@@ -362,7 +362,7 @@ export const teamMembers: TeamMember[] = [
     name: "Priya Mehta",
     email: "p.mehta@parkside-retail.com.au",
     role: "Site Manager",
-    sites: ["Parkside Supermarket — Adelaide"],
+    sites: ["Parkside Supermarket, Adelaide"],
     status: "Active",
     lastActive: "3 days ago",
   },
@@ -373,14 +373,14 @@ export const teamMembers: TeamMember[] = [
     role: "Site Manager",
     sites: ["Dandenong Cold Store"],
     status: "Invited",
-    lastActive: "—",
+    lastActive: "-",
   },
   {
     id: "u-5",
     name: "Claire Evans",
     email: "c.evans@parkside-retail.com.au",
     role: "Viewer",
-    sites: ["Ringwood Retail Park — Melbourne"],
+    sites: ["Ringwood Retail Park, Melbourne"],
     status: "Active",
     lastActive: "6 days ago",
   },
@@ -418,9 +418,9 @@ export const hhMeters: HHMeter[] = [
   },
   {
     siteId: "3",
-    nmi: "—",
-    provider: "—",
-    lastDataPoint: "—",
+    nmi: "-",
+    provider: "-",
+    lastDataPoint: "-",
     hhActive: false,
     status: "Not configured",
   },
@@ -439,7 +439,7 @@ export const subMeters: SubMeter[] = [
   { id: "sm-2", siteId: "1", circuit: "Refrigeration", online: true, lastReading: "3 min ago" },
   { id: "sm-3", siteId: "2", circuit: "Compressor bank A", online: true, lastReading: "1 min ago" },
   { id: "sm-4", siteId: "2", circuit: "Compressor bank B", online: false, lastReading: "14 hrs ago" },
-  { id: "sm-5", siteId: "3", circuit: "HVAC — East wing", online: false, lastReading: "Not deployed" },
+  { id: "sm-5", siteId: "3", circuit: "HVAC East wing", online: false, lastReading: "Not deployed" },
 ];
 
 export type Report = {
@@ -455,7 +455,7 @@ export const reports: Report[] = [
   {
     id: "r-1",
     siteId: "2",
-    title: "Dandenong Cold Store — Q1 2026 Review",
+    title: "Dandenong Cold Store, Q1 2026 Review",
     period: "Jan–Mar 2026",
     pages: 18,
     publishedAt: "2026-04-08",
@@ -463,7 +463,7 @@ export const reports: Report[] = [
   {
     id: "r-2",
     siteId: "1",
-    title: "Parkside Supermarket — Q1 2026 Review",
+    title: "Parkside Supermarket, Q1 2026 Review",
     period: "Jan–Mar 2026",
     pages: 14,
     publishedAt: "2026-04-05",

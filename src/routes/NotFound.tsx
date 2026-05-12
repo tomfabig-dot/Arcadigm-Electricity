@@ -7,7 +7,7 @@ export default function NotFound() {
         <p className="text-xs font-semibold tracking-widest uppercase text-brand">404</p>
         <h1 className="mt-3 text-4xl font-extrabold">Page not found</h1>
         <p className="mt-3 text-ink-muted">
-          That page doesn't exist — but your energy data is still flowing.
+          That page doesn't exist, but your energy data is still flowing.
         </p>
         <div className="mt-8 flex items-center justify-center gap-3">
           <Link to="/" className="btn-primary">Back to home</Link>

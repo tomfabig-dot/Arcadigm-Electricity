@@ -118,7 +118,7 @@ export default function Improvements() {
                         setStatus(
                           i.id,
                           "Acknowledged",
-                          `"${i.title}" acknowledged — it'll stay visible so you can come back to it`,
+                          `"${i.title}" acknowledged. It'll stay visible so you can come back to it.`,
                         )
                       }
                       onResolve={() => setStatus(i.id, "Resolved", `"${i.title}" marked resolved`)}
@@ -303,7 +303,7 @@ function AcknowledgedSection({
         className="w-full p-5 text-left flex items-center justify-between gap-3"
       >
         <div>
-          <div className="font-bold">Acknowledged — {items.length}</div>
+          <div className="font-bold">Acknowledged ({items.length})</div>
           <div className="text-xs text-ink-muted">Items you've flagged to come back to</div>
         </div>
         <span className="text-sm text-ink-muted">{open ? "Hide" : "Show"}</span>
@@ -355,7 +355,7 @@ function ResolvedSection({
         className="w-full p-5 text-left flex items-center justify-between gap-3"
       >
         <div>
-          <div className="font-bold">Resolved — {items.length}</div>
+          <div className="font-bold">Resolved ({items.length})</div>
           <div className="text-xs text-ink-muted">Items you've marked as actioned</div>
         </div>
         <span className="text-sm text-ink-muted">{open ? "Hide" : "Show"}</span>

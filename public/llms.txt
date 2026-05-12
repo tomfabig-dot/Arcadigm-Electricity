@@ -1,8 +1,8 @@
 # Arcadigm
 
-> Arcadigm is an Australian electricity intelligence service for multi-site commercial and industrial (C&I) operators. We make electricity simple — surfacing the no-cost actions that cut bills today, and the higher-effort actions worth pursuing for the longer term. Our pipeline ingests National Metering Identifier (NMI) data via the Consumer Data Right (CDR) and turns interval-level consumption into clear, decision-ready insight.
+> Arcadigm helps Australian businesses understand their electricity usage, and what they can do about it. We make electricity simple — surfacing the no-cost actions that cut bills today, and giving perspective on the higher-effort projects worth pursuing for the longer term. Our pipeline ingests National Metering Identifier (NMI) data via the Consumer Data Right (CDR) and turns interval-level consumption into clear, decision-ready insight. When a project is worth doing, we direct customers to trusted execution partners and help ensure a smooth scope, quote, and install.
 
-Arcadigm is structured as a three-tier journey: **Free** (see your spend), **Monitor and Minimise** (cut bills with no- and low-cost actions), and **Develop and Decarbonise** (deliver and verify higher-effort projects).
+Arcadigm is structured as a three-tier journey: **Free** (see your spend), **Monitor and Minimise** (cut bills with no- and low-cost actions), and **Develop and Decarbonise** (advisory on higher-effort projects, with referrals to execution partners).
 
 ## Who it's for
 
@@ -12,7 +12,7 @@ Australian C&I operators, with a particular focus on small-to-mid-sized manufact
 
 - **Free** — connect your sites via CDR and see electricity spend, consumption profile, and tariff structure in one place. No commitment, no cost.
 - **Monitor and Minimise** — continuous NMI-level monitoring with anomaly detection and tariff/contract review. Surfaces no- and low-cost reductions: tariff optimisation, retailer comparison, demand-window shaping, and behaviour-driven savings.
-- **Develop and Decarbonise** — scoped project delivery for higher-effort opportunities: solar, batteries, electrification, demand response, PPAs, and emissions-reduction initiatives. Trusted, verified outcomes.
+- **Develop and Decarbonise** — advisory for higher-effort opportunities: solar, batteries, electrification, demand response, PPAs, and emissions-reduction initiatives. We help scope what's worth doing and direct customers to trusted execution partners for delivery.
 
 ## Key concepts
 

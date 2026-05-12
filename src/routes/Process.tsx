@@ -4,7 +4,7 @@ const steps = [
     label: "Day one",
     title: "Sign up and log into your portal.",
     body: "Sign up takes less than five minutes. You give consent through the secure Fiskil Consumer Data Right portal and we connect to your meter data. No hardware needed, no site visit, and no hassle. After a quick data update, your readings appear in the portal straight away.",
-    meta: ["About two minutes", "No hardware", "Data in the portal immediately"],
+    meta: ["~5 minutes", "No hardware", "Data in the portal immediately"],
   },
   {
     n: "02",
@@ -17,7 +17,7 @@ const steps = [
     n: "03",
     label: "Ongoing",
     title: "Notifications when it happens, reports when it matters.",
-    body: "We analyse the data and estimate the key inputs of your electricity use. If something shifts on the meter — like a chiller running overnight — we ping you to provide a short-term feedback loop to correct behaviour in future.",
+    body: "We analyse the data and estimate the key inputs of your electricity use. If something shifts on the meter, like a chiller running overnight, we ping you to provide a short-term feedback loop to correct behaviour in future.",
     meta: ["Alerts on change", "Engineer readouts", "Costed suggestions"],
   },
   {
@@ -26,13 +26,6 @@ const steps = [
     title: "A short update, every month.",
     body: "To ensure smooth operations, we provide simple ongoing reporting to cover high-level updates. When we spot an electricity consumption pattern worth more serious intervention, an engineer writes it up in plain English: what to do, what it's likely worth, and what we'd suggest first.",
     meta: ["Monthly note", "Anomalies flagged", "Ranked by dollar impact"],
-  },
-  {
-    n: "05",
-    label: "When a project makes sense",
-    title: "We deliver it, paid from the savings.",
-    body: "When a site is ready for an upgrade, we scope, quote, install, and commission the work. Our fee comes out of the savings we measure on the same meter we started with, so your costs track directly to the result.",
-    meta: ["Scoped against your data", "Measured on the meter", "Paid from savings"],
   },
 ];
 
@@ -49,7 +42,7 @@ function Header() {
   return (
     <section className="pt-xl-2 md:pt-2xl-2 pb-xl-2">
       <div className="container-edit">
-        <p className="eyebrow animate-fade-up">Process · five steps</p>
+        <p className="eyebrow animate-fade-up">Process · four steps</p>
         <h1
           className="mt-md-2 font-display text-display-xl tracking-display text-ink max-w-3xl animate-fade-up"
           style={{
@@ -65,7 +58,7 @@ function Header() {
         >
           Your data is in the portal the moment you sign up. A written readout
           with suggestions follows within five business days. Everything after that
-          is steady — a monthly note, and only the projects that are worth doing.
+          is steady: a monthly note, and only the projects that are worth doing.
         </p>
       </div>
     </section>

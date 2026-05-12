@@ -10,7 +10,7 @@ export default function TrackRecord() {
         file="Case · A"
         sector="Cold-store logistics · 24/7 · Victoria"
         head="Backup compressors were running through the most expensive window of the night."
-        body="A distribution hub with a large electricity bill suspected their compressors weren't running on schedule. A few weeks after connecting, the portal showed backup units firing up during the peak tariff window, five nights a week. Our engineer adjusted the control strategy on site — no new equipment needed, and the change showed on the meter the following month."
+        body="A distribution hub with a large electricity bill suspected their compressors weren't running on schedule. A few weeks after connecting, the portal showed backup units firing up during the peak tariff window, five nights a week. Our engineer adjusted the control strategy on site, no new equipment needed, and the change showed on the meter the following month."
         metrics={[
           { v: "148", u: "k AUD / yr", l: "annual saving" },
           { v: "5.0", u: "months", l: "payback" },
@@ -22,7 +22,7 @@ export default function TrackRecord() {
         file="Case · B"
         sector="National fashion retailer · 34 sites"
         head="Store HVAC was being overridden overnight across a third of the estate."
-        body="Store managers were manually overriding after-hours temperature settings. We identified the eleven worst offenders in the first week and sent a simple alert to the operations director. Later we managed an estate-wide lighting upgrade — quoted, installed, commissioned, and reported on the same meter feed we started with."
+        body="Store managers were manually overriding after-hours temperature settings. We identified the eleven worst offenders in the first week and sent a simple alert to the operations director. Later we managed an estate-wide lighting upgrade that we quoted, installed, commissioned, and reported on the same meter feed we started with."
         metrics={[
           { v: "18.2", u: "%", l: "consumption reduction" },
           { v: "412", u: "MWh / yr", l: "removed" },

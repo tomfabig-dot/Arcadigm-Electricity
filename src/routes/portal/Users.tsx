@@ -379,7 +379,7 @@ export default function Users() {
           </div>
           <p className="mt-4 text-xs text-ink-muted">
             Currently viewing as{" "}
-            <span className="font-semibold text-ink">{viewAs}</span> — rank{" "}
+            <span className="font-semibold text-ink">{viewAs}</span>, rank{" "}
             {roleIndex[viewAs]} of 4.
           </p>
         </div>
@@ -607,7 +607,7 @@ function EditRoleModal({
           })}
         </div>
         <p className="text-xs text-ink-muted">
-          Site access stays the same unless the new role is Client Admin — in that case
+          Site access stays the same unless the new role is Client Admin. In that case
           access switches to all sites.
         </p>
       </div>
@@ -661,7 +661,7 @@ function InviteModal({
       role,
       sites: role === "Client Admin" ? ["All sites"] : [],
       status: "Invited",
-      lastActive: "—",
+      lastActive: "-",
     });
   }
 
@@ -745,7 +745,7 @@ function Cell({ yes, active }: { yes: boolean; active?: boolean }) {
           yes ? "bg-brand-soft text-brand" : "bg-bg-muted text-ink-faint"
         }`}
       >
-        {yes ? "✓" : "—"}
+        {yes ? "✓" : "·"}
       </span>
     </td>
   );
