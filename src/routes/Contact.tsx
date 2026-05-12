@@ -2,7 +2,7 @@ import { useState, FormEvent } from "react";
 import { ArrowUpRight, Check } from "lucide-react";
 
 const EMAIL = "hello@arcadigm.com.au";
-const WEB3FORMS_KEY = "72ad431e-b08d-4065-aee3-4dfedf0a7b7b";
+const WEB3FORMS_KEY = "c9e635b0-90d0-416d-b31d-21bc8ed5c16d";
 
 type Topic = "general" | "pricing" | "project" | "press";
 type Status = "idle" | "sending" | "sent" | "error";
@@ -74,12 +74,30 @@ function Form() {
 
     const subjectLabel = topics.find((t) => t.value === topic)?.label ?? "";
 
+    // Note: web3forms' "Auto Response" body is configured on its dashboard,
+    // not via API. Until that's set up, we include this acknowledgement field
+    // in the payload so the customer (CC'd via cc: email) sees a friendly note
+    // alongside their form copy. Remove this field once the dashboard
+    // auto-response is live.
+    const acknowledgement = [
+      `Hi ${name},`,
+      "",
+      "Thanks for getting in touch with Arcadigm. We've received your message and will come back to you as soon as we can.",
+      "",
+      "In the meantime, if you'd like to test the portal, you can sign up for free at https://arcadigm.com.au/sign-up.",
+      "",
+      "Thanks for your enquiry.",
+      "",
+      "Arcadigm · hello@arcadigm.com.au · arcadigm.com.au",
+    ].join("\n");
+
     const payload = {
       access_key: WEB3FORMS_KEY,
       subject: `Arcadigm enquiry · ${subjectLabel}`,
       from_name: `Arcadigm website · ${name}`,
       replyto: email,
       cc: email,
+      acknowledgement,
       name,
       email,
       company: company || "-",
