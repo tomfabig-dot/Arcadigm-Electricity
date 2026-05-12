@@ -1,4 +1,5 @@
 import { useState, FormEvent } from "react";
+import { Link } from "react-router-dom";
 import { ArrowUpRight, Check } from "lucide-react";
 
 const EMAIL = "hello@arcadigm.com.au";
@@ -136,13 +137,18 @@ function Form() {
               </h2>
             </div>
             <p className="mt-md-2 text-body-l text-ink-muted leading-prose">
-              We'll reply to{" "}
-              {email ? (
-                <span className="text-ink font-medium">{email}</span>
-              ) : (
-                "you"
-              )}{" "}
-              as soon as possible.
+              Thanks for getting in touch with Arcadigm. We've received your
+              message and will come back to you as soon as we can.
+            </p>
+            <p className="mt-md-2 text-body-l text-ink-muted leading-prose">
+              In the meantime, if you'd like to test the portal, you can{" "}
+              <Link
+                to="/sign-up"
+                className="text-ink font-medium underline-offset-4 hover:underline"
+              >
+                sign up for free
+              </Link>
+              .
             </p>
           </div>
         </div>

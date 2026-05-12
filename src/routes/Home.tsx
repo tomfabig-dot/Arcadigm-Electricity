@@ -119,7 +119,7 @@ function LiveReadout() {
           <SceneLabel
             n="02"
             label="Smart meter"
-            items={["Read every 30 minutes", "No new hardware", "Consent via CDR"]}
+            items={["Read every 30 minutes", "No new hardware", "Provide us data consent"]}
           />
           <SceneLabel
             n="03"
@@ -748,8 +748,9 @@ const steps = [
   {
     index: "01",
     title: "Sign up",
-    lede: "Quick smart meter data access through our partner Fiskil. No additional hardware required, or site visits. Your historic data and analytics are ready in minutes.",
+    lede: "Quick smart meter data access once you provide consent.* No additional hardware required, or site visits. Your historic data and analytics are ready in minutes.",
     meta: ["~5 minutes", "No additional hardware", "Consumer Data Right"],
+    footnote: "* This is done through our Consumer Data Right partner, Fiskil.",
     align: "left" as const,
   },
   {
